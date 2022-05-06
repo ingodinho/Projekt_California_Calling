@@ -240,8 +240,8 @@ header .header_flex a {
 .section_bear-bright #img_animation {
   position: absolute;
   width: 40%;
-  top: -15vh;
-  right: -5%;
+  top: -20vh;
+  right: -10%;
   z-index: 1;
   animation: rolling 10s infinite linear;
 }
