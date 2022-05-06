@@ -1,0 +1,23 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%
+}
+
+body {
+    overflow-x: hidden;
+}
+
+a {
+    display: inline-block;
+}
+
+a:hover {
+    color: $clr-000;
+    background: $clr-fff;
+    background-color: $clr-fff;
+}

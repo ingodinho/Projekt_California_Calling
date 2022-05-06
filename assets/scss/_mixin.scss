@@ -1,0 +1,19 @@
+
+@mixin flex_row ($justify,$align){
+    display: flex;
+    flex-direction: row;
+    justify-content: $justify;
+    align-items: $align;
+}
+
+@mixin grid($template, $justify, $align) {
+    display: grid;
+    grid-template: $template;
+    justify-content: $justify;
+    align-items: $align;
+}
+
+@mixin a_button {
+    padding: 2rem 5rem;
+    border: 1px solid $clr-fff;
+}
