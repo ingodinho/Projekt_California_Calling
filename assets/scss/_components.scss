@@ -179,70 +179,75 @@ header {
     }
 }
 
-.section_calendar {
-    background: $clr-000;
-    color: $clr-fff;
-    padding: 20vh 50% 20vh $space-left;
-
-    a {
-        @include a_button;
-        margin: 5vh 0 5vh 0;
-    }
-
-}
 
 
 footer {
     position: relative;
     overflow: hidden;
-}
-
-
-.banderole {
-    height: 20vh;
-    width: 100%;
-    background: $clr-fff;
-    color: $clr-000;
-    overflow: hidden;
-    position: absolute;
-    transform: translate(30%, -300%) rotate(45deg);
     
-    p{ 
-        animation: banderole 10s infinite linear;
-        font-size: 150px;
-        white-space: nowrap;
-        transform: translateX(-100%);
-
-        span {
-
+    .section_calendar {
+        background: $clr-000;
+        color: $clr-fff;
+        padding: 20vh 50% 10vh $space-left;
+    
+        a {
+            @include a_button;
+            margin: 5vh 0 5vh 0;
         }
+    
     }
-}
 
-.old_footer {
-    background: $clr-000;
-    color: $clr-fff;
-    padding: 10vh $space-left 10vh $space-right;
-    @include grid(1fr/1fr 1fr, space-between, center);
-    .footer_left {
-
-        .footer_sz {
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-            img {
-                width: 50px;
+    .banderole {
+        height: 20vh;
+        width: 100%;
+        background: $clr-fff;
+        color: $clr-000;
+        overflow: hidden;
+        position: absolute;
+        transform: translate(30%, -300%) rotate(45deg);
+        vertical-align: middle;
+        
+        p{ 
+            animation: banderole 10s infinite linear;
+            font-size: 150px;
+            white-space: nowrap;
+            transform: translateX(-100%);
+            font-weight: 600;
+    
+            span {
+                color: white;
+                -webkit-text-stroke: 1px $clr-000;
             }
         }
     }
-
-    .footer_right {
-        text-align: right;
-        img {
-            width: 15%;
+    .old_footer {
+        background: $clr-000;
+        color: $clr-fff;
+        padding: 5vh $space-left 5vh $space-right;
+        @include grid(1fr/1fr 1fr, space-between, center);
+        .footer_left {
+    
+            .footer_sz {
+                display: flex;
+                align-items: center;
+                gap: 1rem;
+                img {
+                    width: 30px;
+                }
+            }
+        }
+    
+        .footer_right {
+            text-align: right;
+            img {
+                width: 15%;
+            }
         }
     }
 }
+
+
+
 
 @keyframes rolling {
     0% {

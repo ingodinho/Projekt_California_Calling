@@ -14,10 +14,10 @@ body {
 
 a {
     display: inline-block;
+    transition: background 0.5s linear;
 }
 
 a:hover {
     color: $clr-000;
-    background: $clr-fff;
-    background-color: $clr-fff;
+    background: $clr-fff-0_5;
 }

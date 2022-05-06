@@ -93,12 +93,12 @@ body {
 
 a {
   display: inline-block;
+  transition: background 0.5s linear;
 }
 
 a:hover {
   color: #000;
-  background: #fff;
-  background-color: #fff;
+  background: rgba(255, 255, 255, 0.5);
 }
 
 header {
@@ -260,23 +260,21 @@ header .header_flex a {
   right: 15%;
 }
 
-.section_calendar {
-  background: #000;
-  color: #fff;
-  padding: 20vh 50% 20vh 5%;
-}
-.section_calendar a {
-  padding: 2rem 5rem;
-  border: 1px solid #fff;
-  margin: 5vh 0 5vh 0;
-}
-
 footer {
   position: relative;
   overflow: hidden;
 }
-
-.banderole {
+footer .section_calendar {
+  background: #000;
+  color: #fff;
+  padding: 20vh 50% 10vh 5%;
+}
+footer .section_calendar a {
+  padding: 2rem 5rem;
+  border: 1px solid #fff;
+  margin: 5vh 0 5vh 0;
+}
+footer .banderole {
   height: 20vh;
   width: 100%;
   background: #fff;
@@ -284,34 +282,40 @@ footer {
   overflow: hidden;
   position: absolute;
   transform: translate(30%, -300%) rotate(45deg);
+  vertical-align: middle;
 }
-.banderole p {
+footer .banderole p {
   animation: banderole 10s infinite linear;
   font-size: 150px;
   white-space: nowrap;
   transform: translateX(-100%);
+  font-weight: 600;
 }
-.old_footer {
+footer .banderole p span {
+  color: white;
+  -webkit-text-stroke: 1px #000;
+}
+footer .old_footer {
   background: #000;
   color: #fff;
-  padding: 10vh 5% 10vh 5%;
+  padding: 5vh 5% 5vh 5%;
   display: grid;
   grid-template: 1fr/1fr 1fr;
   justify-content: space-between;
   align-items: center;
 }
-.old_footer .footer_left .footer_sz {
+footer .old_footer .footer_left .footer_sz {
   display: flex;
   align-items: center;
   gap: 1rem;
 }
-.old_footer .footer_left .footer_sz img {
-  width: 50px;
+footer .old_footer .footer_left .footer_sz img {
+  width: 30px;
 }
-.old_footer .footer_right {
+footer .old_footer .footer_right {
   text-align: right;
 }
-.old_footer .footer_right img {
+footer .old_footer .footer_right img {
   width: 15%;
 }
 
