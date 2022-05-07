@@ -4,6 +4,9 @@
     src: url('../fonts/Larish\ Neue\ Semibold.woff2');
 }
 
+// =============================================
+//              HEADLINES/ANCHOR
+// =============================================
 
 h1 {
     font-family: $ff-larish;
@@ -40,12 +43,20 @@ a {
     font-size: $fs-m;
 }
 
+
+// =============================================
+//            Paragraph per Section
+// =============================================
+
 .article_intro {
-    font-size: $fs-xxl;
-    font-family: $ff-larish;
+
+    p {
+        font-family: $ff-larish;
+        font-size: $fs-xxl;
+    }
 }
 
-.div_article {
+.div_stats_article {
     p {
         font-family: $ff-sans;
         font-size: $fs-ms;
@@ -54,8 +65,8 @@ a {
 
 .article_stuck {
     p{ 
-        font-size: $fs-m;
         font-family: $ff-sans;
+        font-size: $fs-m;
         line-height: 2;
     }
 }
@@ -83,6 +94,13 @@ a {
         p {
             font-size: $fs-lm;
         }
+    }
+}
+
+.banderole {
+    p {
+        font-size: $fs-band;
+        font-weight: 600;
     }
 }
 

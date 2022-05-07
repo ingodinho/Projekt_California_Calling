@@ -16,4 +16,17 @@
 @mixin a_button {
     padding: 2rem 5rem;
     border: 1px solid $clr-fff;
+    display: inline-block;
+    transition: background 0.5s linear;
+
+    &:hover {
+        color: $clr-000;
+        background: $clr-fff-0_5;
+    }
+}
+
+@mixin media($screen-width) {
+    @media only screen and ( max-width: $screen-width ){
+        @content;
+    }
 }

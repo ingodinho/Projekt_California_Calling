@@ -1,11 +1,15 @@
-// Suche nach -webkit-text-stroke und -webkit-text-stroke-color
+// ===========================================================
+//                      HEADER
+// =========================================================== 
 
 header {
     text-align: center;
     padding: 0  $space-right 10vh $space-left;
     background-color: $clr-000;
     color: $clr-fff;
+    
     .stroke {
+        border-right: 2px solid transparent;
         border-left: 2px solid $clr-fff-0_5;
         padding: 15vh 0;
         width: 1px;
@@ -33,12 +37,17 @@ header {
         @include flex_row(space-between, center);
         padding: 5vh 0;
 
-        a {
+        a{
             @include a_button;
         }
     }
     
 }
+
+// ===========================================================
+//                      SECTIONS INTRO
+// =========================================================== 
+
 
 .section_intro_stats {
     background: $clr-000 url('../img/map.svg') bottom 15% right / 40% no-repeat;
@@ -48,11 +57,16 @@ header {
     .div_stats {
         padding: 20vh 0;
 
-        .div_article {
+        .div_stats_article {
             padding: 2.5vh 0;
         }
     }
 }
+
+// ===========================================================
+//                      SECTIONS STUCK
+// =========================================================== 
+
 
 .section_stuck {
     padding: 70vh $space-right 50vh $space-right;
@@ -112,6 +126,10 @@ header {
     }
 }
 
+// ===========================================================
+//                      SECTIONS BEAR
+// =========================================================== 
+
 .section_bear {
     @include grid(40vh / 1fr 1fr, space-between, center);
     padding: 40vh $space-left 100vh $space-right;
@@ -125,6 +143,10 @@ header {
         padding: 0 10% 0 0;
     }
 
+    img {
+        position: absolute;
+    }
+
 }
 
 .section_bear-dark {
@@ -133,7 +155,6 @@ header {
     padding: 30vh $space-left 100vh $space-right;
 
     #img_gb-one {
-        position: absolute;
         width: 50%;
         bottom: -20vh;
         left: 10%;
@@ -141,7 +162,6 @@ header {
     }
 
     #img_gb-two {
-        position: absolute;
         width: 25%;
         bottom: -10vh;
         right: 20%;
@@ -149,12 +169,10 @@ header {
     }
 }
 
-
 .section_bear-bright {
     padding: 60vh $space-left 120vh $space-right;
 
     #img_animation {
-        position: absolute;
         width: 40%;
         top: -20vh;
         right: -10%;
@@ -163,7 +181,6 @@ header {
     }
 
     #img_poppy_bear {
-        position: absolute;
         width: 30%;
         bottom: 25vh;
         left: 15%;
@@ -171,14 +188,18 @@ header {
     }
 
     #img_rose_bear {
-        position: absolute;
         width: 50%;
-        z-index: 1;
         bottom: 15vh;
         right: 15%;
+        z-index: 1;
     }
 }
 
+
+
+// ===========================================================
+//                      SECTIONS FOOTER/CALENDAR
+// =========================================================== 
 
 
 footer {
@@ -190,29 +211,26 @@ footer {
         color: $clr-fff;
         padding: 20vh 50% 10vh $space-left;
     
-        a {
+        a{
             @include a_button;
-            margin: 5vh 0 5vh 0;
+            margin: 5vh 0;
         }
     
     }
 
     .banderole {
+        color: $clr-000;
+        background: $clr-fff;
+        position: absolute;
+        overflow: hidden;
         height: 20vh;
         width: 100%;
-        background: $clr-fff;
-        color: $clr-000;
-        overflow: hidden;
-        position: absolute;
         transform: translate(30%, -300%) rotate(45deg);
-        vertical-align: middle;
         
         p{ 
-            animation: banderole 10s infinite linear;
-            font-size: 150px;
+            animation: banderole 20s infinite linear;
             white-space: nowrap;
-            transform: translateX(-100%);
-            font-weight: 600;
+            -webkit-text-stroke: 1px $clr-000;
     
             span {
                 color: white;
@@ -220,19 +238,23 @@ footer {
             }
         }
     }
-    .old_footer {
+
+    .lower_footer {
         background: $clr-000;
         color: $clr-fff;
         padding: 5vh $space-left 5vh $space-right;
         @include grid(1fr/1fr 1fr, space-between, center);
+
         .footer_left {
     
             .footer_sz {
-                display: flex;
-                align-items: center;
+                @include flex_row(flex-start, center);
                 gap: 1rem;
-                img {
-                    width: 30px;
+
+                a{
+                    img {
+                        width: 30px;
+                    }
                 }
             }
         }
@@ -247,6 +269,9 @@ footer {
 }
 
 
+// ===========================================================
+//                      KEYFRAMES
+// =========================================================== 
 
 
 @keyframes rolling {
@@ -265,7 +290,7 @@ footer {
 
 @keyframes banderole {
     0% {
-        transform: translateX(-100%);
+        transform: translateX(-200%);
     }
 
     50% {
@@ -273,6 +298,6 @@ footer {
     }
 
     100% {
-        transform: translateX(-100%);
+        transform: translateX(-200%);
     }   
 }

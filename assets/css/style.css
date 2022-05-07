@@ -38,19 +38,19 @@ a {
   font-size: 2rem;
 }
 
-.article_intro {
-  font-size: 11rem;
+.article_intro p {
   font-family: "Larish Neue", serif;
+  font-size: 11rem;
 }
 
-.div_article p {
+.div_stats_article p {
   font-family: "Work Sans", sans-serif;
   font-size: 1.6rem;
 }
 
 .article_stuck p {
-  font-size: 2rem;
   font-family: "Work Sans", sans-serif;
+  font-size: 2rem;
   line-height: 2;
 }
 
@@ -69,6 +69,11 @@ a {
 
 .section_calendar article p {
   font-size: 5rem;
+}
+
+.banderole p {
+  font-size: 14rem;
+  font-weight: 600;
 }
 
 .footer_left p {
@@ -91,16 +96,6 @@ body {
   overflow-x: hidden;
 }
 
-a {
-  display: inline-block;
-  transition: background 0.5s linear;
-}
-
-a:hover {
-  color: #000;
-  background: rgba(255, 255, 255, 0.5);
-}
-
 header {
   text-align: center;
   padding: 0 5% 10vh 5%;
@@ -108,6 +103,7 @@ header {
   color: #fff;
 }
 header .stroke {
+  border-right: 2px solid transparent;
   border-left: 2px solid rgba(255, 255, 255, 0.5);
   padding: 15vh 0;
   width: 1px;
@@ -137,6 +133,12 @@ header .header_flex {
 header .header_flex a {
   padding: 2rem 5rem;
   border: 1px solid #fff;
+  display: inline-block;
+  transition: background 0.5s linear;
+}
+header .header_flex a:hover {
+  color: #000;
+  background: rgba(255, 255, 255, 0.5);
 }
 
 .section_intro_stats {
@@ -147,7 +149,7 @@ header .header_flex a {
 .section_intro_stats .div_stats {
   padding: 20vh 0;
 }
-.section_intro_stats .div_stats .div_article {
+.section_intro_stats .div_stats .div_stats_article {
   padding: 2.5vh 0;
 }
 
@@ -213,6 +215,9 @@ header .header_flex a {
 .section_bear .article_bear-paragraph {
   padding: 0 10% 0 0;
 }
+.section_bear img {
+  position: absolute;
+}
 
 .section_bear-dark {
   color: #fff;
@@ -220,14 +225,12 @@ header .header_flex a {
   padding: 30vh 5% 100vh 5%;
 }
 .section_bear-dark #img_gb-one {
-  position: absolute;
   width: 50%;
   bottom: -20vh;
   left: 10%;
   z-index: 2;
 }
 .section_bear-dark #img_gb-two {
-  position: absolute;
   width: 25%;
   bottom: -10vh;
   right: 20%;
@@ -238,7 +241,6 @@ header .header_flex a {
   padding: 60vh 5% 120vh 5%;
 }
 .section_bear-bright #img_animation {
-  position: absolute;
   width: 40%;
   top: -20vh;
   right: -10%;
@@ -246,18 +248,16 @@ header .header_flex a {
   animation: rolling 10s infinite linear;
 }
 .section_bear-bright #img_poppy_bear {
-  position: absolute;
   width: 30%;
   bottom: 25vh;
   left: 15%;
   z-index: 2;
 }
 .section_bear-bright #img_rose_bear {
-  position: absolute;
   width: 50%;
-  z-index: 1;
   bottom: 15vh;
   right: 15%;
+  z-index: 1;
 }
 
 footer {
@@ -272,30 +272,33 @@ footer .section_calendar {
 footer .section_calendar a {
   padding: 2rem 5rem;
   border: 1px solid #fff;
-  margin: 5vh 0 5vh 0;
+  display: inline-block;
+  transition: background 0.5s linear;
+  margin: 5vh 0;
+}
+footer .section_calendar a:hover {
+  color: #000;
+  background: rgba(255, 255, 255, 0.5);
 }
 footer .banderole {
+  color: #000;
+  background: #fff;
+  position: absolute;
+  overflow: hidden;
   height: 20vh;
   width: 100%;
-  background: #fff;
-  color: #000;
-  overflow: hidden;
-  position: absolute;
   transform: translate(30%, -300%) rotate(45deg);
-  vertical-align: middle;
 }
 footer .banderole p {
-  animation: banderole 10s infinite linear;
-  font-size: 150px;
+  animation: banderole 20s infinite linear;
   white-space: nowrap;
-  transform: translateX(-100%);
-  font-weight: 600;
+  -webkit-text-stroke: 1px #000;
 }
 footer .banderole p span {
   color: white;
   -webkit-text-stroke: 1px #000;
 }
-footer .old_footer {
+footer .lower_footer {
   background: #000;
   color: #fff;
   padding: 5vh 5% 5vh 5%;
@@ -304,18 +307,20 @@ footer .old_footer {
   justify-content: space-between;
   align-items: center;
 }
-footer .old_footer .footer_left .footer_sz {
+footer .lower_footer .footer_left .footer_sz {
   display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
   align-items: center;
   gap: 1rem;
 }
-footer .old_footer .footer_left .footer_sz img {
+footer .lower_footer .footer_left .footer_sz a img {
   width: 30px;
 }
-footer .old_footer .footer_right {
+footer .lower_footer .footer_right {
   text-align: right;
 }
-footer .old_footer .footer_right img {
+footer .lower_footer .footer_right img {
   width: 15%;
 }
 
@@ -332,13 +337,13 @@ footer .old_footer .footer_right img {
 }
 @keyframes banderole {
   0% {
-    transform: translateX(-100%);
+    transform: translateX(-200%);
   }
   50% {
     transform: translateX(0);
   }
   100% {
-    transform: translateX(-100%);
+    transform: translateX(-200%);
   }
 }
 
