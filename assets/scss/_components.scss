@@ -7,7 +7,7 @@ header {
     padding: 0  $space-right 10vh $space-left;
     background-color: $clr-000;
     color: $clr-fff;
-    
+
     .stroke {
         border-right: 2px solid transparent;
         border-left: 2px solid $clr-fff-0_5;
@@ -74,10 +74,10 @@ header {
 
     .article_stuck {
         padding: 0 27.5% 0 27.5%;
+    }
 
-        p:nth-of-type(2) {
-            padding: 100vh 0 0 0;
-        }
+    .article_stuck-two {
+        margin: 100vh 0 0 0;
     }
 
     img {
@@ -275,7 +275,7 @@ footer {
 
 
 @keyframes rolling {
-    0% {
+    0% { 
         transform: rotate(0deg);
     }
     50% {
