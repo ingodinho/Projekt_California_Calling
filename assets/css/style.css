@@ -348,39 +348,15 @@ footer .lower_footer .footer_right img {
 }
 @media only screen and (max-width: 576px) {
   html {
-    font-size: 7px;
+    font-size: 8px;
   }
 
   h1 {
     font-size: 8rem;
   }
 
-  .article_bear-headline p {
-    font-size: 2rem;
-  }
-
-  .article_bear-paragraph p:nth-of-type(1) {
-    font-size: 3rem;
-    line-height: 1.2;
-  }
-  .article_bear-paragraph p:nth-of-type(2) {
-    font-size: 2rem;
-    line-height: 3;
-  }
-
-  .section_calendar article p {
+  .section_intro_stats .article_intro p {
     font-size: 5rem;
-  }
-
-  .banderole p {
-    font-size: 14rem;
-    font-weight: 600;
-  }
-
-  .footer_left p {
-    font-family: "Work Sans", sans-serif;
-    font-size: 1.6rem;
-    line-height: 2;
   }
 
   .section_intro_stats {
@@ -455,11 +431,27 @@ footer .lower_footer .footer_right img {
   }
 
   .section_bear-dark {
-    padding: 40vh 5% 40vh 5%;
+    padding: 25vh 5% 25vh 5%;
   }
 
   .section_bear-bright {
-    padding: 30vh 5% 70vh 5%;
+    padding: 25vh 5% 70vh 5%;
+  }
+  .section_bear-bright #img_animation {
+    top: -10vh;
+    right: -5%;
+  }
+  .section_bear-bright #img_poppy_bear {
+    width: 40%;
+    bottom: 20vh;
+    left: 10%;
+    z-index: 2;
+  }
+  .section_bear-bright #img_rose_bear {
+    width: 60%;
+    bottom: 15vh;
+    right: 10%;
+    z-index: 1;
   }
 
   footer .section_calendar {

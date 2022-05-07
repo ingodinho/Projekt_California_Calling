@@ -1,5 +1,6 @@
 // ====================================================
 //          ANPASSUNG MOBILE AUF 576px;
+//                  HEIGHT beim TESTEN war 668px;
 // ====================================================
 
 @include media($break-sm) {
@@ -10,7 +11,7 @@
 
 
     html {
-            font-size: 7px;
+            font-size: 8px;
 
         }
         
@@ -22,74 +23,15 @@
         font-size: $fs-l;
     }
 
-    // h2 {
-    //     font-family: $ff-larish;
-    //     font-size: $fs-xl;
-    // }
-
-    // h3 {
-    //     font-family: $ff-larish;
-    //     font-size: $fs-l;
-    //     line-height: 0.9;
-    // }
-
-    // h4 {
-    //     font-family: $ff-sans;
-    //     font-size: $fs-ms;
-    //     font-weight: 600;
-    // }
-
-    // h5 {
-    //     font-family: $ff-sans;
-    //     font-size: $fs-m;
-    //     font-weight: 400;
-    // }
-
-
-
     // =============================================
     //            Paragraph per Section
     // =============================================
 
-
-    .article_bear-headline {
-        p {
-            font-size: $fs-m;
-        }
-    }
-
-    .article_bear-paragraph {
-        p:nth-of-type(1) {
-            font-size: $fs-ml;
-            line-height: 1.2;
-        }
-
-        p:nth-of-type(2) {
-            font-size: $fs-m;
-            line-height: 3;
-        }
-    }
-
-    .section_calendar {
-        article {
+    .section_intro_stats {
+        .article_intro {
             p {
                 font-size: $fs-lm;
             }
-        }
-    }
-
-    .banderole {
-        p {
-            font-size: $fs-band;
-            font-weight: 600;
-        }
-    }
-
-    .footer_left {
-        p {
-            font-family: $ff-sans;
-            font-size: $fs-ms;
-            line-height: 2;
         }
     }
 
@@ -189,11 +131,30 @@
     }
 
     .section_bear-dark {
-        padding: 40vh $space-left 40vh $space-right;
+        padding: 25vh $space-left 25vh $space-right;
     }
 
     .section_bear-bright {
-        padding: 30vh $space-left 70vh $space-right;
+        padding: 25vh $space-left 70vh $space-right;
+
+        #img_animation {
+            top: -10vh;
+            right: -5%;
+        }
+    
+        #img_poppy_bear {
+            width: 40%;
+            bottom: 20vh;
+            left: 10%;
+            z-index: 2;
+        }
+    
+        #img_rose_bear {
+            width: 60%;
+            bottom: 15vh;
+            right: 10%;
+            z-index: 1;
+        }
     }
 
 
