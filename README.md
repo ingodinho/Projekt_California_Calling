@@ -1,6 +1,6 @@
 # Projekt_California_Calling
 
-Projekt California Calling, erstellen im Rahmen des Bootcamps bei SuperCode.
+Projekt California Calling, erstellt im Rahmen des Bootcamps bei SuperCode.
 
 Verwendete Technologien sind HTML und SCSS.
 Fokus lag auf Positionierung, Animations und Transforms.
