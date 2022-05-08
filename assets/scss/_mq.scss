@@ -1,17 +1,17 @@
 // ====================================================
 //          ANPASSUNG MOBILE AUF 576px;
 //                  HEIGHT beim TESTEN war 668px;
+
 // ====================================================
 
 @include media($break-sm) {
 
-    // ===========================================================
+    // ========================================================
 //                      FONTS
 // =========================================================== 
 
-
     html {
-            font-size: 8px;
+            font-size: 55%;
 
         }
         
@@ -60,12 +60,12 @@
 
 
     .section_stuck {
-        padding: 20vh $space-right 20vh $space-right;
+        padding: 20vh 0 20vh 0;
         text-align: center;
         position: initial;
 
-        @include grid (repeat(6,1fr, 1fr 1fr), center, center);
-        gap: 10px;
+        @include grid (repeat(6,0.5fr) / 1fr 1fr, center, center);
+        gap: 5px;
 
         .article_stuck {
             padding: 10vh 10% 10vh 10%;
@@ -74,6 +74,7 @@
 
         img {
             position: initial;
+            min-width: initial;
             width: 100%;
             height: 100%;
             object-fit: cover;
@@ -136,6 +137,7 @@
 
     .section_bear-bright {
         padding: 25vh $space-left 70vh $space-right;
+        overflow: hidden;
 
         #img_animation {
             top: -10vh;
@@ -157,12 +159,9 @@
         }
     }
 
-
-
     // ===========================================================
     //                      SECTIONS FOOTER/CALENDAR
     // =========================================================== 
-
 
     footer {
         
@@ -191,23 +190,15 @@
             }
         }
     }
+}
 
+// ====================================================
+//          ANPASSUNG MOBILE auf 400px;
 
-    // ===========================================================
-    //                      KEYFRAMES
-    // =========================================================== 
+// ====================================================
 
-
-    @keyframes rolling {
-        0% {
-            transform: rotate(0deg);
-        }
-        50% {
-            transform: rotate(180deg);
-        }
-
-        100% {
-            transform: rotate(360deg);
-        }
+@include media($break-mobile) {
+    html {
+        font-size: 40%;
     }
 }

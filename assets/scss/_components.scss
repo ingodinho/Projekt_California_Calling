@@ -219,6 +219,7 @@ footer {
     }
 
     .banderole {
+        @include flex_row (flex-start,center);
         color: $clr-000;
         background: $clr-fff;
         position: absolute;
@@ -228,7 +229,7 @@ footer {
         transform: translate(30%, -300%) rotate(45deg);
         
         p{ 
-            animation: banderole 20s infinite linear;
+            animation: banderole 30s infinite linear;
             white-space: nowrap;
             -webkit-text-stroke: 1px $clr-000;
     
@@ -290,14 +291,14 @@ footer {
 
 @keyframes banderole {
     0% {
-        transform: translateX(-200%);
+        transform: translateX(-80%);
     }
 
     50% {
-        transform: translateX(0);
+        transform: translateX(-20%);
     }
 
     100% {
-        transform: translateX(-200%);
+        transform: translateX(-80%);
     }   
 }

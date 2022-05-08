@@ -281,6 +281,10 @@ footer .section_calendar a:hover {
   background: rgba(255, 255, 255, 0.5);
 }
 footer .banderole {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
   color: #000;
   background: #fff;
   position: absolute;
@@ -290,7 +294,7 @@ footer .banderole {
   transform: translate(30%, -300%) rotate(45deg);
 }
 footer .banderole p {
-  animation: banderole 20s infinite linear;
+  animation: banderole 30s infinite linear;
   white-space: nowrap;
   -webkit-text-stroke: 1px #000;
 }
@@ -337,18 +341,18 @@ footer .lower_footer .footer_right img {
 }
 @keyframes banderole {
   0% {
-    transform: translateX(-200%);
+    transform: translateX(-80%);
   }
   50% {
-    transform: translateX(0);
+    transform: translateX(-20%);
   }
   100% {
-    transform: translateX(-200%);
+    transform: translateX(-80%);
   }
 }
 @media only screen and (max-width: 576px) {
   html {
-    font-size: 8px;
+    font-size: 55%;
   }
 
   h1 {
@@ -370,14 +374,14 @@ footer .lower_footer .footer_right img {
   }
 
   .section_stuck {
-    padding: 20vh 5% 20vh 5%;
+    padding: 20vh 0 20vh 0;
     text-align: center;
     position: initial;
     display: grid;
-    grid-template: repeat(6, 1fr, 1fr 1fr);
+    grid-template: repeat(6, 0.5fr)/1fr 1fr;
     justify-content: center;
     align-items: center;
-    gap: 10px;
+    gap: 5px;
   }
   .section_stuck .article_stuck {
     padding: 10vh 10% 10vh 10%;
@@ -385,6 +389,7 @@ footer .lower_footer .footer_right img {
   }
   .section_stuck img {
     position: initial;
+    min-width: initial;
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -436,6 +441,7 @@ footer .lower_footer .footer_right img {
 
   .section_bear-bright {
     padding: 25vh 5% 70vh 5%;
+    overflow: hidden;
   }
   .section_bear-bright #img_animation {
     top: -10vh;
@@ -478,17 +484,10 @@ footer .lower_footer .footer_right img {
   footer .lower_footer .footer_right img {
     width: 30%;
   }
-
-  @keyframes rolling {
-    0% {
-      transform: rotate(0deg);
-    }
-    50% {
-      transform: rotate(180deg);
-    }
-    100% {
-      transform: rotate(360deg);
-    }
+}
+@media only screen and (max-width: 400px) {
+  html {
+    font-size: 40%;
   }
 }
 
